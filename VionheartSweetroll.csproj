@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<RootNamespace>VionheartSweetroll</RootNamespace>
+		<Version>0.0.0</Version>
+		<IsNickelMod>True</IsNickelMod>
+		<IncludedModProjectPaths>i18n;assets</IncludedModProjectPaths>
+		<LangVersion>12.0</LangVersion>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>disable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<WarningsAsErrors>Nullable</WarningsAsErrors>
+		<CheckEolTargetFramework>false</CheckEolTargetFramework>
+		<ModZipPath>$(MSBuildProjectDirectory)\.release\$(MSBuildProjectName)-$(Version).zip</ModZipPath>
+		<GameExePath>D:\SteamLibrary\steamapps\common\Cobalt Core\CobaltCore.exe</GameExePath>
+		<ModLoaderPath>D:\SteamLibrary\steamapps\common\Cobalt Core\Nickel</ModLoaderPath>
+		<GameDllPath>$(MSBuildProjectDirectory)\..\..\..\Decompiled\CobaltCore.dll</GameDllPath>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Nickel.ModBuildConfig" Version="2.0.2" />
+		<PackageReference Include="EnumByNameSourceGenerator" Version="1.1.2" PrivateAssets="all" ExcludeAssets="runtime">
+		  <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+	<ItemGroup>
+		<Project Include="Configuration.props.user" Condition="Exists('Configuration.props.user')" />
+	</ItemGroup>
+</Project>

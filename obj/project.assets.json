@@ -1,0 +1,188 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "EnumByNameSourceGenerator/1.1.2": {
+        "type": "package"
+      },
+      "Fayti1703.AssemblyTasks/1.1.0": {
+        "type": "package",
+        "build": {
+          "build/Fayti1703.AssemblyTasks.targets": {}
+        }
+      },
+      "Nanoray.ExtractSingleFileApplicationResourceTask/1.0.0": {
+        "type": "package",
+        "build": {
+          "build/Nanoray.ExtractSingleFileApplicationResourceTask.targets": {}
+        }
+      },
+      "Nickel.ModBuildConfig/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Fayti1703.AssemblyTasks": "1.1.0",
+          "Nanoray.ExtractSingleFileApplicationResourceTask": "1.0.0"
+        },
+        "build": {
+          "build/Nickel.ModBuildConfig.targets": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EnumByNameSourceGenerator/1.1.2": {
+      "sha512": "NjM5gOweszolVDcJlKf9XVPMVmOeqi3HUc05Lz8lxmDCRqJnIrNSqiSRQsGYOtqUKkJMmNIoKlEIGwpGnmKEDw==",
+      "type": "package",
+      "path": "enumbynamesourcegenerator/1.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.md",
+        "analyzers/dotnet/cs/EnumByNameSourceGenerator.dll",
+        "enumbynamesourcegenerator.1.1.2.nupkg.sha512",
+        "enumbynamesourcegenerator.nuspec"
+      ]
+    },
+    "Fayti1703.AssemblyTasks/1.1.0": {
+      "sha512": "U4vvSx3nhLFMHlnrMSKlFa0Jfu1l7dGZPxmnA+zVswJJDUbbmoupGugt2yXCzlWUJar30IIs2k9f/NhqbWcQrA==",
+      "type": "package",
+      "path": "fayti1703.assemblytasks/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.md",
+        "build/Fayti1703.AssemblyTasks.dll",
+        "build/Fayti1703.AssemblyTasks.targets",
+        "build/Mono.Cecil.Pdb.dll",
+        "build/Mono.Cecil.dll",
+        "fayti1703.assemblytasks.1.1.0.nupkg.sha512",
+        "fayti1703.assemblytasks.nuspec"
+      ]
+    },
+    "Nanoray.ExtractSingleFileApplicationResourceTask/1.0.0": {
+      "sha512": "0U6jrrA25UVpCSz+nxjB4dISGulsWnlgzyff01+49azDh+glCA3Jp1r7cUgmlMob9HhcrCUBTvqg4/GU4KDE/A==",
+      "type": "package",
+      "path": "nanoray.extractsinglefileapplicationresourcetask/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.md",
+        "build/Nanoray.ExtractSingleFileApplicationResourceTask.dll",
+        "build/Nanoray.ExtractSingleFileApplicationResourceTask.targets",
+        "build/SingleFileExtractor.Core.dll",
+        "nanoray.extractsinglefileapplicationresourcetask.1.0.0.nupkg.sha512",
+        "nanoray.extractsinglefileapplicationresourcetask.nuspec"
+      ]
+    },
+    "Nickel.ModBuildConfig/2.0.2": {
+      "sha512": "9KxNpUfgbBNDJnuNhUC3dFeYfwcGuoXChdpJrlvf4tBcVeTBK3LKQTl81wfeE/6S6vaMK1bgJnXw0MGWZCfw5Q==",
+      "type": "package",
+      "path": "nickel.modbuildconfig/2.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.md",
+        "analyzers/dotnet/cs/Nickel.ModBuildConfig.Analyzer.dll",
+        "build/FindModLoaderPath.targets",
+        "build/Newtonsoft.Json.dll",
+        "build/Nickel.ModBuildConfig.dll",
+        "build/Nickel.ModBuildConfig.targets",
+        "nickel.modbuildconfig.2.0.2.nupkg.sha512",
+        "nickel.modbuildconfig.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "EnumByNameSourceGenerator >= 1.1.2",
+      "Nickel.ModBuildConfig >= 2.0.2"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\xyril\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "0.0.0",
+    "restore": {
+      "projectUniqueName": "F:\\Github\\Cobalt-Core-Sweetroll\\VionheartSweetroll.csproj",
+      "projectName": "VionheartSweetroll",
+      "projectPath": "F:\\Github\\Cobalt-Core-Sweetroll\\VionheartSweetroll.csproj",
+      "packagesPath": "C:\\Users\\xyril\\.nuget\\packages\\",
+      "outputPath": "F:\\Github\\Cobalt-Core-Sweetroll\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\xyril\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {}
+        }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.200"
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "dependencies": {
+          "EnumByNameSourceGenerator": {
+            "include": "Compile, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[1.1.2, )"
+          },
+          "Nickel.ModBuildConfig": {
+            "target": "Package",
+            "version": "[2.0.2, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[8.0.15, 8.0.15]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[8.0.15, 8.0.15]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[8.0.15, 8.0.15]"
+          }
+        ],
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

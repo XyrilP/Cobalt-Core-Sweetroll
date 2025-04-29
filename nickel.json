@@ -1,0 +1,15 @@
+{
+  "UniqueName": "VionheartSweetroll",
+  "Version": "0.0.0",
+  "Author": "XyrilP.",
+  "Description": "Sweetroll joins the Cobalt crew!",
+  "RequiredApiVersion": "1.5.7",
+  "EntryPointAssembly": "VionheartSweetroll.dll",
+  "LoadPhase": "AfterDbInit",
+  "Dependencies": [
+    {
+      "UniqueName": "Shockah.Kokoro",
+      "Version": "1.12.1"
+    }
+  ]
+}

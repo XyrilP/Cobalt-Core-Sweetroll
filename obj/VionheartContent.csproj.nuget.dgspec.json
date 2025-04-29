@@ -1,0 +1,88 @@
+{
+  "format": 1,
+  "restore": {
+    "F:\\Github\\Cobalt-Core-VionheartSweetroll-Content\\VionheartContent.csproj": {}
+  },
+  "projects": {
+    "F:\\Github\\Cobalt-Core-VionheartSweetroll-Content\\VionheartContent.csproj": {
+      "version": "0.8.0",
+      "restore": {
+        "projectUniqueName": "F:\\Github\\Cobalt-Core-VionheartSweetroll-Content\\VionheartContent.csproj",
+        "projectName": "VionheartContent",
+        "projectPath": "F:\\Github\\Cobalt-Core-VionheartSweetroll-Content\\VionheartContent.csproj",
+        "packagesPath": "C:\\Users\\xyril\\.nuget\\packages\\",
+        "outputPath": "F:\\Github\\Cobalt-Core-VionheartSweetroll-Content\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\xyril\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "EnumByNameSourceGenerator": {
+              "include": "Compile, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.2, )"
+            },
+            "Nickel.ModBuildConfig": {
+              "target": "Package",
+              "version": "[2.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.15, 8.0.15]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.15, 8.0.15]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.15, 8.0.15]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+F:\Github\Cobalt-Core-VionheartSweetroll-Content\obj\Release\net8.0\Scarlet.csproj.AssemblyReference.cache
+F:\Github\Cobalt-Core-VionheartSweetroll-Content\obj\Release\net8.0\Scarlet.GeneratedMSBuildEditorConfig.editorconfig
+F:\Github\Cobalt-Core-VionheartSweetroll-Content\obj\Release\net8.0\Scarlet.AssemblyInfoInputs.cache
+F:\Github\Cobalt-Core-VionheartSweetroll-Content\obj\Release\net8.0\Scarlet.AssemblyInfo.cs
+F:\Github\Cobalt-Core-VionheartSweetroll-Content\obj\Release\net8.0\Scarlet.csproj.CoreCompileInputs.cache
+F:\Github\Cobalt-Core-VionheartSweetroll-Content\obj\Release\net8.0\Scarlet.sourcelink.json

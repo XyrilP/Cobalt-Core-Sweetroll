@@ -1,0 +1,8 @@
+F:\Github\Cobalt-Core-Sweetroll\bin\Release\net8.0\VionheartSweetroll.deps.json
+F:\Github\Cobalt-Core-Sweetroll\bin\Release\net8.0\VionheartSweetroll.dll
+F:\Github\Cobalt-Core-Sweetroll\obj\Release\net8.0\VionheartSweetroll.csproj.AssemblyReference.cache
+F:\Github\Cobalt-Core-Sweetroll\obj\Release\net8.0\VionheartSweetroll.GeneratedMSBuildEditorConfig.editorconfig
+F:\Github\Cobalt-Core-Sweetroll\obj\Release\net8.0\VionheartSweetroll.AssemblyInfoInputs.cache
+F:\Github\Cobalt-Core-Sweetroll\obj\Release\net8.0\VionheartSweetroll.AssemblyInfo.cs
+F:\Github\Cobalt-Core-Sweetroll\obj\Release\net8.0\VionheartSweetroll.csproj.CoreCompileInputs.cache
+F:\Github\Cobalt-Core-Sweetroll\obj\Release\net8.0\VionheartSweetroll.dll

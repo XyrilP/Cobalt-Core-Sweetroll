@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "uLijx4thBXM=",
+  "success": true,
+  "projectFilePath": "F:\\Github\\Cobalt-Core-Sweetroll\\VionheartSweetroll.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\xyril\\.nuget\\packages\\enumbynamesourcegenerator\\1.1.2\\enumbynamesourcegenerator.1.1.2.nupkg.sha512",
+    "C:\\Users\\xyril\\.nuget\\packages\\fayti1703.assemblytasks\\1.1.0\\fayti1703.assemblytasks.1.1.0.nupkg.sha512",
+    "C:\\Users\\xyril\\.nuget\\packages\\nanoray.extractsinglefileapplicationresourcetask\\1.0.0\\nanoray.extractsinglefileapplicationresourcetask.1.0.0.nupkg.sha512",
+    "C:\\Users\\xyril\\.nuget\\packages\\nickel.modbuildconfig\\2.0.2\\nickel.modbuildconfig.2.0.2.nupkg.sha512",
+    "C:\\Users\\xyril\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.15\\microsoft.netcore.app.ref.8.0.15.nupkg.sha512",
+    "C:\\Users\\xyril\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.15\\microsoft.windowsdesktop.app.ref.8.0.15.nupkg.sha512",
+    "C:\\Users\\xyril\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.15\\microsoft.aspnetcore.app.ref.8.0.15.nupkg.sha512"
+  ],
+  "logs": []
+}
