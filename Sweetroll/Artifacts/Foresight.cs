@@ -28,19 +28,6 @@ public class Foresight : Artifact, IRegisterable
     }
     public override void OnCombatStart(State state, Combat combat)
     {
-        if (combat.turn == 1)
-        {
-            combat.QueueImmediate(
-            [
-                new ACardSelect
-                {
-                    browseAction = new ChooseCardToPutInHand
-                    {
-                    },
-                    browseSource = CardBrowse.Source.DrawPile
-                }
-            ]
-            );
-        }
+        state.ship.Add(VionheartSweetroll.Instance.ForesightDraw.Status, 1);
     }
 }

@@ -2,10 +2,11 @@ using Nanoray.PluginManager;
 using Nickel;
 using System.Collections.Generic;
 using System.Reflection;
+using VionheartSweetroll.Actions;
 
 namespace VionheartSweetroll.Cards;
 
-public class Directive : Card, IRegisterable
+public class Refocus : Card, IRegisterable
 {
     private static ISpriteEntry? BaseArt { get; set; }
     private static ISpriteEntry? FlippedArt1 { get; set; }
@@ -21,11 +22,11 @@ public class Directive : Card, IRegisterable
             Meta = new CardMeta
             {
                 deck = VionheartSweetroll.Instance.Sweetroll_Deck.Deck, //Which deck should this card go to?
-                rarity = Rarity.common, //What rarity should this card be?
+                rarity = Rarity.rare, //What rarity should this card be?
                 dontOffer = false, //Should this card be offered to the player?
                 upgradesTo = [Upgrade.A, Upgrade.B] //Does this card upgrade? and if it has an A or B upgrade.
             },
-            Name = VionheartSweetroll.Instance.AnyLocalizations.Bind(["card", "Directive", "name"]).Localize, //Card's name, localized.
+            Name = VionheartSweetroll.Instance.AnyLocalizations.Bind(["card", "Refocus", "name"]).Localize, //Card's name, localized.
             Art = BaseArt?.Sprite //Card art
         }
         );
@@ -40,18 +41,21 @@ public class Directive : Card, IRegisterable
         {
             Upgrade.None => new CardData
             {
-                description = VionheartSweetroll.Instance.Localizations.Localize(["card", "Directive", "description"]),
-                cost = 1
+                description = VionheartSweetroll.Instance.Localizations.Localize(["card", "Refocus", "description"]),
+                cost = 3,
+                exhaust = true
             },
             Upgrade.A => new CardData
             {
-                description = VionheartSweetroll.Instance.Localizations.Localize(["card", "Directive", "descA"]),
-                cost = 0
+                description = VionheartSweetroll.Instance.Localizations.Localize(["card", "Refocus", "descA"]),
+                cost = 2,
+                exhaust = true
             },
             Upgrade.B => new CardData
             {
-                description = VionheartSweetroll.Instance.Localizations.Localize(["card", "Directive", "descB"]),
-                cost = 1
+                description = VionheartSweetroll.Instance.Localizations.Localize(["card", "Refocus", "descB"]),
+                cost = 3,
+                exhaust = true
             },
             _ => new CardData{}
         };
@@ -62,43 +66,41 @@ public class Directive : Card, IRegisterable
         {
             Upgrade.None =>
             [
-                new ACardSelect
+                new AShuffleExhaustToDiscardPile
                 {
-                    browseAction = new ChooseCardToPutInHand
-                    {
-                    },
-                    browseSource = CardBrowse.Source.DrawPile,
-                    filterUUID = uuid
+                },
+                new AStatus
+                {
+                    status = VionheartSweetroll.Instance.ForesightDraw.Status,
+                    statusAmount = 1,
+                    targetPlayer = true
                 }
             ],
             Upgrade.A =>
             [
-                new ACardSelect
+                new AShuffleExhaustToDiscardPile
                 {
-                    browseAction = new ChooseCardToPutInHand
-                    {
-                    },
-                    browseSource = CardBrowse.Source.DrawPile,
-                    filterUUID = uuid
+                },
+                new AStatus
+                {
+                    status = VionheartSweetroll.Instance.ForesightDraw.Status,
+                    statusAmount = 1,
+                    targetPlayer = true
                 }
             ],
             Upgrade.B =>
             [
-                new ACardSelect
+                new AShuffleDiscardToDrawPile
                 {
-                    browseAction = new ChooseCardToPutInHand
-                    {
-                    },
-                    browseSource = CardBrowse.Source.DrawPile,
-                    filterUUID = uuid
                 },
-                new ACardSelect
+                new AShuffleExhaustToDiscardPile
                 {
-                    browseAction = new ChooseCardToPutInHand
-                    {
-                    },
-                    browseSource = CardBrowse.Source.DrawPile,
-                    filterUUID = uuid
+                },
+                new AStatus
+                {
+                    status = VionheartSweetroll.Instance.ForesightDraw.Status,
+                    statusAmount = 1,
+                    targetPlayer = true
                 }
             ],
             _ => []

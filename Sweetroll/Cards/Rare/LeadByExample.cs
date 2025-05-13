@@ -5,7 +5,7 @@ using System.Reflection;
 
 namespace VionheartSweetroll.Cards;
 
-public class Directive : Card, IRegisterable
+public class LeadByExample : Card, IRegisterable
 {
     private static ISpriteEntry? BaseArt { get; set; }
     private static ISpriteEntry? FlippedArt1 { get; set; }
@@ -21,11 +21,11 @@ public class Directive : Card, IRegisterable
             Meta = new CardMeta
             {
                 deck = VionheartSweetroll.Instance.Sweetroll_Deck.Deck, //Which deck should this card go to?
-                rarity = Rarity.common, //What rarity should this card be?
+                rarity = Rarity.rare, //What rarity should this card be?
                 dontOffer = false, //Should this card be offered to the player?
                 upgradesTo = [Upgrade.A, Upgrade.B] //Does this card upgrade? and if it has an A or B upgrade.
             },
-            Name = VionheartSweetroll.Instance.AnyLocalizations.Bind(["card", "Directive", "name"]).Localize, //Card's name, localized.
+            Name = VionheartSweetroll.Instance.AnyLocalizations.Bind(["card", "LeadByExample", "name"]).Localize, //Card's name, localized.
             Art = BaseArt?.Sprite //Card art
         }
         );
@@ -40,18 +40,19 @@ public class Directive : Card, IRegisterable
         {
             Upgrade.None => new CardData
             {
-                description = VionheartSweetroll.Instance.Localizations.Localize(["card", "Directive", "description"]),
-                cost = 1
+                description = VionheartSweetroll.Instance.Localizations.Localize(["card", "LeadByExample", "description"]),
+                cost = 3
             },
             Upgrade.A => new CardData
             {
-                description = VionheartSweetroll.Instance.Localizations.Localize(["card", "Directive", "descA"]),
-                cost = 0
+                description = VionheartSweetroll.Instance.Localizations.Localize(["card", "LeadByExample", "description"]),
+                cost = 2
             },
             Upgrade.B => new CardData
             {
-                description = VionheartSweetroll.Instance.Localizations.Localize(["card", "Directive", "descB"]),
-                cost = 1
+                description = VionheartSweetroll.Instance.Localizations.Localize(["card", "LeadByExample", "description"]),
+                cost = 3,
+                retain = true
             },
             _ => new CardData{}
         };
@@ -62,43 +63,44 @@ public class Directive : Card, IRegisterable
         {
             Upgrade.None =>
             [
+                new AAttack
+                {
+                    damage = GetDmg(s, 3)
+                },
                 new ACardSelect
                 {
-                    browseAction = new ChooseCardToPutInHand
+                    browseSource = CardBrowse.Source.Hand,
+                    browseAction = new ChooseCardInYourHandToPlayForFree
                     {
-                    },
-                    browseSource = CardBrowse.Source.DrawPile,
-                    filterUUID = uuid
+                    }
                 }
             ],
             Upgrade.A =>
             [
+                new AAttack
+                {
+                    damage = GetDmg(s, 3)
+                },
                 new ACardSelect
                 {
-                    browseAction = new ChooseCardToPutInHand
+                    browseSource = CardBrowse.Source.Hand,
+                    browseAction = new ChooseCardInYourHandToPlayForFree
                     {
-                    },
-                    browseSource = CardBrowse.Source.DrawPile,
-                    filterUUID = uuid
+                    }
                 }
             ],
             Upgrade.B =>
             [
-                new ACardSelect
+                new AAttack
                 {
-                    browseAction = new ChooseCardToPutInHand
-                    {
-                    },
-                    browseSource = CardBrowse.Source.DrawPile,
-                    filterUUID = uuid
+                    damage = GetDmg(s, 3)
                 },
                 new ACardSelect
                 {
-                    browseAction = new ChooseCardToPutInHand
+                    browseSource = CardBrowse.Source.Hand,
+                    browseAction = new ChooseCardInYourHandToPlayForFree
                     {
-                    },
-                    browseSource = CardBrowse.Source.DrawPile,
-                    filterUUID = uuid
+                    }
                 }
             ],
             _ => []

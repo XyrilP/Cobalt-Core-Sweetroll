@@ -1,226 +1,80 @@
 {
   "character": {
-    "Scarlet": {
-      "name": "Scarlet",
-      "description": "<c=BC2C3D>SCARLET</c>\nYour other pilot.\n<c=riggs>Riggs</c>' boyfriend from the <c=643264>fu</c><c=c864c8>tu</c><c=643264>re</c>?\nHis cards confer <c=keyword>unconventional movement</c> with an effective mix of <c=keyword>offensive</c> and <c=keyword>defensive</c> options."
-    },
     "Sweetroll": {
       "name": "Sweetroll",
       "description": "<c=5F00BC>SWEETROLL</c>\nYour captain."
     }
   },
   "artifact": {
-    "Cloak": {
-      "name": "CLOAK",
-      "description": "At start of turn, if you have 0 <c=status>FADE</c>, gain 1 <c=status>FADE</c>."
-    },
-    "Dagger": {
-      "name": "DAGGER",
-      "description": "If you have <c=status>FADE</c>, all of your attacks pierces."
-    },
-    "ElectrolyteSurge": {
-      "name": "ELECTROLYTE SURGE",
-      "description": "Every two times your discard pile is shuffled back into your draw pile, gain 1 <c=energy>ENERGY</c>.\n<c=downside>Caps at 1 per turn.</c>"
-    },
-    "SlowRoll": {
-      "name": "SLOW ROLL",
-      "description": "Draw an additional card after the first turn."
-    },
-    "TrickAction": {
-      "name": "TRICK ACTION",
-      "description": "If you end your turn with 0 <c=status>FADE</c>, gain 1 <c=status>FADE</c>."
-    },
-    "CardEngine": {
-      "name": "CARD ENGINE",
-      "description": "Draw an additional card after the first turn.\nEvery <c=keyword>10th</c> time you draw a card, draw an additional card."
-    },
-    "VionheartShard_Scarlet": {
-      "name": "VIONHEART SHARD",
-      "description": "At start of combat, gain 4 <c=status>FADE</c>."
-    },
-    "ReactionWheel": {
-      "name": "REACTION WHEEL",
-      "description": "Every <c=keyword>10th</c> time you draw a card, gain 1 <c=status>EVADE</c>.\n<c=downside>Caps at 2 per turn.</c>"
-    },
-    "CloakAndDagger": {
-      "name": "CLOAK AND DAGGER",
-      "description": "At the start of turn, gain 1 <c=status>FADE</c>.\nIf you have <c=status>FADE</c>, all of your attacks deal <c=keyword>1</c> additional damage."
-    },
-    "HardlightAfterburners": {
-      "name": "HARDLIGHT AFTERBURNERS",
-      "description": "At the start of combat, every two turns, gain 1 <c=status>HERMES</c>."
-    },
-    "Twinsticks": {
-      "name": "TWINSTICKS",
-      "description": "At start of turn, gain 1 <c=status>EVADE</c>. Every other turn, gain 1 <c=status>FADE</c>."
-    },
-    "EngagementRings": {
-      "name": "ENGAGEMENT RINGS",
-      "description": "At start of turn, gain 1 <c=status>RAGE</c>. Every other turn, gain 1 <c=status>SCARLET BARRAGE</c>."
-    },
-    "VanguardBerthing": {
-      "name": "VANGUARD BERTHING",
-      "description": "Gain <c=keyword>1</c> additional crew-member."
-    },
-    "TwoPilots": {
-      "name": "TWO PILOTS",
-      "description" : "At the start of combat, gain 1 <c=energy>ENERGY</c>, 1 <c=status>EVADE</c>, 1 <c=status>FADE</c>, draw an additional card and 1 <c=status>DRAW NEXT TURN</c>.\nLove motivates you to do your best.\nLet's get out of this mess.\nTogether."
-    },
     "Foresight": {
-      "name": "FORESIGHT",
-      "description": "At the start of combat, choose a card in your draw pile to add to your hand."
+      "name": "FORESIGHT PREP",
+      "description": "At the start of combat, gain 1 <c=status>FORESIGHT DRAW</c>."
     }
   },
   "ship": {
-    "Vanguard": {
-      "name": "Vanguard",
-      "description": "The T2XS Vanguard! <c=>SCARLET</c>'s starship from Theresita Silversoul."
-    }
   },
   "card": {
-    "placeholder": {
-      "name": "PLACEHOLDER",
-      "description": "placeholder"
-    },
-    "Veer": {
-      "name": "Veer"
-    },
-    "DriveBy": {
-      "name": "Drive-By"
-    },
-    "ThrottleDown": {
-      "name": "Throttle Down"
-    },
-    "ThrottleUp": {
-      "name": "Throttle Up"
-    },
-    "SneakAttack": {
-      "name": "Sneak Attack"
-    },
-    "AdjustThrottle": {
-      "name": "Adjust Throttle"
-    },
-    "ArtemisMissile": {
-      "name": "Artemis Missile"
-    },
-    "HideAndSneak": {
-      "name": "Hide & Sneak"
-    },
-    "TrickDaggerCard": {
-      "name": "Trick Dagger"
-    },
-    "RunAndGun": {
-      "name": "Run and Gun"
-    },
-    "StepAway": {
-      "name": "Step Away"
-    },
-    "Patience": {
-      "name": "Patience"
-    },
-    "Serpentine": {
-      "name": "Serpentine"
-    },
-    "BarrelRoll": {
-      "name": "Barrel Roll"
-    },
-    "BlinkStrike": {
-      "name": "Blink Strike"
-    },
-    "UncannyDodge": {
-      "name": "Uncanny Dodge"
-    },
-    "YashaDaggerCard": {
-      "name": "Yasha Dagger"
-    },
-    "SangeDaggerCard": {
-      "name": "Sange Dagger"
-    },
-    "FlankingManeuver": {
-      "name": "Flanking Maneuver"
-    },
-    "DefensivePiloting" : {
-      "name": "Defensive Piloting"
-    },
-    "TricksOfTheTrade": {
-      "name": "Tricks of the Trade",
-      "desc": "",
-      "descA": "",
-      "descB": ""
-    },
-    "CutTheEngines": {
-      "name": "Cut the Engines"
-    },
-    "Afterburn": {
-      "name": "Royal Drive"
-    },
-    "FadeCard": {
-      "name": "Fade Away"
-    },
-    "AileronRoll": {
-      "name": "Aileron Roll"
-    },
-    "Vendetta": {
-      "name": "Vendetta"
-    },
-    "Backstab": {
-      "name": "Backstab",
-      "description": "X = your <c=status>FADE</c>.\nAttack. Dmg = <c=damage>1</c> + X <c=cardtrait>pierce, stun.</c>\n<c=status>FADE</c> = 0.",
-      "descA": "X = your <c=status>FADE</c>.\nAttack. Dmg = <c=damage>1</c> + X <c=cardtrait>pierce, stun.</c>\n<c=status>FADE</c> = 0.",
-      "descB": "X = your <c=status>FADE</c>.\nAttack. Dmg = <c=damage>1</c> + 2X <c=cardtrait>pierce, stun.</c>\n<c=status>FADE</c> = 0."
-    },
-    "BulletHell": {
-      "name": "Bullet Hell"
-    },
-    "Reevaluate": {
-      "name": "Reevaluate"
-    },
-    "ScarletEXE": {
-      "name": "Scarlet.EXE",
-      "description": "Add 1 of 2 <c=cardtrait>discount, temp</c> <c=BC2C3D>SCARLET</c> cards to your hand.",
-      "descA": "Add 1 of 2 <c=cardtrait>discount, temp</c> <c=BC2C3D>SCARLET</c> cards to your hand.",
-      "descB": "Add 1 of 3 <c=cardtrait>discount, temp</c> <c=BC2C3D>SCARLET</c> cards to your hand."
-    },
     "Directive": {
-      "name": "Directive"
+      "name": "Directive",
+      "description": "Choose a card from draw pile and add it to your hand.",
+      "descA": "Choose a card from draw pile and add it to your hand.",
+      "descB": "Choose 2 cards from draw pile and add it to your hand."
     },
     "VulcanShotgun": {
       "name": "Vulcan Shotgun"
     },
     "ReloadVulcanShotgun": {
       "name": "Reload Vulcan"
+    },
+    "Recall": {
+      "name": "Recall Knowledge"
+    },
+    "Vulnerability": {
+      "name": "Personal Antithesis",
+      "description": "Part ahead of cockpit becomes <c=damage>Weak</c>, or likewise <c=damage>Brittle</c>."
+    },
+    "LeadByExample": {
+      "name": "Lead by Example",
+      "description": "Attack for <c=damage>3</c> damage.\nChoose a card in your hand to play for free."
+    },
+    "Hindsight": {
+      "name": "Hindsight",
+      "description": "Restore two discarded cards. Gain 1 <c=status>FORESIGHT DRAW</c>.",
+      "descA": "Restore two discarded cards. Gain 1 <c=status>FORESIGHT DRAW</c>.",
+      "descB": "Restore four discarded cards. Gain 1 <c=status>FORESIGHT DRAW</c>."
+    },
+    "PocketLibrary": {
+      "name": "Pocket Library"
+    },
+    "Hypercognition": {
+      "name": "Hypercognition",
+      "description": "Add 3 <c=cardtrait>disc, temp, s. use</c> Recall Knowledge to deck. Gain 1 <c=status>F. DRAW</c>.",
+      "descA": "Add 3 <c=cardtrait>disc, temp, s. use</c> Recall Knowledge to deck. Gain 1 <c=status>F. DRAW</c>.",
+      "descB": "Add 6 <c=cardtrait>disc, temp, s. use</c> Recall Knowledge to deck. Gain 1 <c=status>F. DRAW</c>."
+    },
+    "Refocus": {
+      "name": "Refocus",
+      "description": "Restore exhaust to discard pile.\nGain 1 <c=status>FORESIGHT DRAW</c>.",
+      "descA": "Restore exhaust to discard pile.\nGain 1 <c=status>FORESIGHT DRAW</c>.",
+      "descB": "Restore exhaust to discard to draw pile.\nGain 1 <c=status>F. DRAW</c>."
+    },
+    "SweetrollEXE": {
+      "name": "Sweetroll.EXE",
+      "description": "Add 1 of 2 <c=cardtrait>discount, temp</c> <c=5F00BC>SWEETROLL</c> cards to your hand.",
+      "descA": "Add 1 of 2 <c=cardtrait>discount, temp</c> <c=5F00BC>SWEETROLL</c> cards to your hand.",
+      "descB": "Add 1 of 3 <c=cardtrait>discount, temp</c> <c=5F00BC>SWEETROLL</c> cards to your hand."
     }
   },
   "status": {
-    "Fade": {
-      "name": "Fade",
-      "description": "Next direct hit on this ship will force the other to <c=keyword>cumulatively</c> move <c=movement>1</c> space randomly instead.\nYour attacks ignore all shields and armor.\n<c=downside>Decreases by 1 per instance or when you attack.</c>"
+    "ForesightDraw": {
+      "name": "Foresight Draw",
+      "description": "The next time you draw a card, choose one to put into your hand instead."
     },
-    "scarletBarrage": {
-      "name": "Scarlet Barrage",
-      "description": "<c=downside>Inaccurately</c> fire {0} times for <c=keyword>0</c> damage immediately after every attack or move you make that applies <c=keyword>1</c> <c=status>SATURATION</c>. <c=downside>Goes away at start of next turn.</c>"
-    },
-    "Saturation": {
-      "name": "Saturation",
-      "description": "When this ship reaches <c=keyword>2</c> Saturation, it takes <c=damage>1</c> damage!"
+    "AkashicDownload": {
+      "name": "Akashic Download",
+      "description": "At start of turn, perform {0} <c=status>FORESIGHT DRAW</c>."
     }
   },
   "midrow": {
-    "TrickDagger_Missile": {
-      "name": "TRICK DAGGER",
-      "description": "This dagger is going to deal <c=damage>2</c> damage.\nIgnores all shields and armor.\n<c=keyword>Shooting</c> this dagger randomly moves it 1 space."
-    },
-    "SangeDagger_Missile": {
-      "name": "SANGE DAGGER",
-      "description": "This dagger is going to deal <c=damage>2</c> damage.\nIgnores all shields and armor.\n<c=keyword>Shooting</c> this dagger randomly moves it 1 space.\n<c=downside>It cannot miss!</c>"
-    },
-    "YashaDagger_Missile": {
-      "name": "YASHA DAGGER",
-      "description": "This dagger is going to deal <c=damage>3</c> damage.\nIgnores all shields and armor.\n<c=keyword>Shooting</c> this dagger randomly moves it 1 space."
-    },
-    "ScarletDagger_Missile": {
-      "name": "SCARLET DAGGER",
-      "description": "This dagger is going to deal <c=damage>1</c> damage.\nIgnores all shields and armor.\n<c=keyword>Shooting</c> this dagger increases its damage by 1."
-    }
   }
 }

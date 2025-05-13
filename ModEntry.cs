@@ -11,6 +11,7 @@ using VionheartSweetroll.ExternalAPI;
 using VionheartSweetroll.Cards;
 using VionheartSweetroll.Dialogue;
 using VionheartSweetroll.Artifacts;
+using VionheartSweetroll.Features;
 
 
 
@@ -18,7 +19,6 @@ namespace VionheartSweetroll;
 internal class VionheartSweetroll : SimpleMod
 {
     /* Declare stuff! */
-
     internal static VionheartSweetroll Instance { get; private set; } = null!;
     internal Harmony Harmony;
     internal IKokoroApi.IV2 KokoroApi;
@@ -30,9 +30,7 @@ internal class VionheartSweetroll : SimpleMod
     internal string UniqueName { get; private set; }
     public LocalDB localDB { get; set; } = null!;
 
-    internal IDeckEntry Sweetroll_Deck;
-
-    /* VionheartSweetroll Content */
+    /* Vionheart Content */
     private static List<Type> Colorless_Common_Card_Types = [
         /* Common cards. */
     ];
@@ -74,21 +72,32 @@ internal class VionheartSweetroll : SimpleMod
             .Concat(Colorless_All_Artifact_Types)
             .Concat(Ship_Artifact_Types)
             .Concat(Event_Types);
-    /* VionheartSweetroll Content */
+    /* Vionheart Content */
     /* Sweetroll Content */
+    internal IDeckEntry Sweetroll_Deck;
+    internal IStatusEntry ForesightDraw { get; }
+    internal IStatusEntry AkashicDownload { get; }
     private static List<Type> Sweetroll_Common_Card_Types = [
         /* Sweetroll's common cards. */
         typeof(Directive),
-        typeof(VulcanShotgun)
+        typeof(VulcanShotgun),
+        typeof(Recall),
+        typeof(Vulnerability)
     ];
     private static List<Type> Sweetroll_Uncommon_Card_Types = [
         /* Sweetroll's uncommon cards. */
+        typeof(Hindsight)
     ];
     private static List<Type> Sweetroll_Rare_Card_Types = [
         /* Sweetroll's rare cards. */
+        typeof(PocketLibrary),
+        typeof(LeadByExample),
+        typeof(Hypercognition),
+        typeof(Refocus)
     ];
     private static List<Type> Sweetroll_Special_Card_Types = [
         /* Sweetroll's special cards. */
+        typeof(SweetrollEXE),
         typeof(ReloadVulcanShotgun)
     ];
         /* Concat all Sweetroll cards. */
@@ -155,7 +164,7 @@ internal class VionheartSweetroll : SimpleMod
             Definition = new DeckDef
             {
                 color = new Color("5F00BC"), //old color: 560319
-                titleColor = new Color("000000")
+                titleColor = new Color("FFFFFF")
             },
             DefaultCardArt = RegisterSprite(package, "assets/cards/cardbg_blank.png").Sprite,
             BorderSprite = RegisterSprite(package, "assets/cards/border_sweetroll.png").Sprite,
@@ -199,9 +208,40 @@ internal class VionheartSweetroll : SimpleMod
                     new Foresight()
                 ]
             },
-            Description = AnyLocalizations.Bind(["character", "Sweetroll", "description"]).Localize
+            Description = AnyLocalizations.Bind(["character", "Sweetroll", "description"]).Localize,
+            ExeCardType = typeof(SweetrollEXE)
         }
         );
+        /* Foresight Draw status */
+        ForesightDraw = helper.Content.Statuses.RegisterStatus("ForesightDraw", new StatusConfiguration
+        {
+            Definition = new StatusDef
+            {
+                isGood = true,
+                affectedByTimestop = false,
+                color = new Color("5F00BC"),
+                icon = RegisterSprite(package, "assets/icons/foresightDraw.png").Sprite
+            },
+            Name = AnyLocalizations.Bind(["status", "ForesightDraw", "name"]).Localize,
+            Description = AnyLocalizations.Bind(["status", "ForesightDraw", "description"]).Localize
+        }
+        );
+        _ = new ForesightDrawManager(package, helper);
+        /* Akashic Download status */
+        AkashicDownload = helper.Content.Statuses.RegisterStatus("AkashicDownload", new StatusConfiguration
+        {
+            Definition = new StatusDef
+            {
+                isGood = true,
+                affectedByTimestop = false,
+                color = new Color("5F00BC"),
+                icon = RegisterSprite(package, "assets/icons/akashicDownload.png").Sprite
+            },
+            Name = AnyLocalizations.Bind(["status", "AkashicDownload", "name"]).Localize,
+            Description = AnyLocalizations.Bind(["status", "AkashicDownload", "description"]).Localize
+        }
+        );
+        _ = new AkashicDownloadManager(package, helper);
         /* Register all artifacts and cards into the game, allowing it to be played. (Based on AllRegisterableTypes) */
         foreach (var type in AllRegisterableTypes)
             AccessTools.DeclaredMethod(type, nameof(IRegisterable.Register))?.Invoke(null, [package, helper]);

@@ -1,0 +1,6 @@
+1. Use MultiCardBrowse (reference Bloch)
+2. Make granting cards faster
+3. Improve Foresight Draw
+    1. Make Foresight Draw actually work properly when turn begins.
+        * Only choses (value) amount of cards at the very end instead of at the start.
+        * Buggy because it messes with actual card draw code.

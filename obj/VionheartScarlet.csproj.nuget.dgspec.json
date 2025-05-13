@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Github\\Cobalt-Core-VionheartSweetroll-Content\\VionheartScarlet.csproj": {}
+    "F:\\Github\\Cobalt-Core-VionheartSweetroll-Content\\VionheartSweetroll.csproj": {}
   },
   "projects": {
-    "F:\\Github\\Cobalt-Core-VionheartSweetroll-Content\\VionheartScarlet.csproj": {
+    "F:\\Github\\Cobalt-Core-VionheartSweetroll-Content\\VionheartSweetroll.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Github\\Cobalt-Core-VionheartSweetroll-Content\\VionheartScarlet.csproj",
-        "projectName": "VionheartScarlet",
-        "projectPath": "F:\\Github\\Cobalt-Core-VionheartSweetroll-Content\\VionheartScarlet.csproj",
+        "projectUniqueName": "F:\\Github\\Cobalt-Core-VionheartSweetroll-Content\\VionheartSweetroll.csproj",
+        "projectName": "VionheartSweetroll",
+        "projectPath": "F:\\Github\\Cobalt-Core-VionheartSweetroll-Content\\VionheartSweetroll.csproj",
         "packagesPath": "C:\\Users\\xyril\\.nuget\\packages\\",
         "outputPath": "F:\\Github\\Cobalt-Core-VionheartSweetroll-Content\\obj\\",
         "projectStyle": "PackageReference",

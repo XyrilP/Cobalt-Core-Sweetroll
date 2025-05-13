@@ -5,7 +5,7 @@ using System.Reflection;
 
 namespace VionheartSweetroll.Cards;
 
-public class Directive : Card, IRegisterable
+public class PocketLibrary : Card, IRegisterable
 {
     private static ISpriteEntry? BaseArt { get; set; }
     private static ISpriteEntry? FlippedArt1 { get; set; }
@@ -21,11 +21,11 @@ public class Directive : Card, IRegisterable
             Meta = new CardMeta
             {
                 deck = VionheartSweetroll.Instance.Sweetroll_Deck.Deck, //Which deck should this card go to?
-                rarity = Rarity.common, //What rarity should this card be?
+                rarity = Rarity.rare, //What rarity should this card be?
                 dontOffer = false, //Should this card be offered to the player?
                 upgradesTo = [Upgrade.A, Upgrade.B] //Does this card upgrade? and if it has an A or B upgrade.
             },
-            Name = VionheartSweetroll.Instance.AnyLocalizations.Bind(["card", "Directive", "name"]).Localize, //Card's name, localized.
+            Name = VionheartSweetroll.Instance.AnyLocalizations.Bind(["card", "PocketLibrary", "name"]).Localize, //Card's name, localized.
             Art = BaseArt?.Sprite //Card art
         }
         );
@@ -40,18 +40,18 @@ public class Directive : Card, IRegisterable
         {
             Upgrade.None => new CardData
             {
-                description = VionheartSweetroll.Instance.Localizations.Localize(["card", "Directive", "description"]),
-                cost = 1
+                cost = 4,
+                exhaust = true
             },
             Upgrade.A => new CardData
             {
-                description = VionheartSweetroll.Instance.Localizations.Localize(["card", "Directive", "descA"]),
-                cost = 0
+                cost = 3,
+                exhaust = true
             },
             Upgrade.B => new CardData
             {
-                description = VionheartSweetroll.Instance.Localizations.Localize(["card", "Directive", "descB"]),
-                cost = 1
+                cost = 4,
+                exhaust = true
             },
             _ => new CardData{}
         };
@@ -62,43 +62,47 @@ public class Directive : Card, IRegisterable
         {
             Upgrade.None =>
             [
-                new ACardSelect
+                new AStatus
                 {
-                    browseAction = new ChooseCardToPutInHand
-                    {
-                    },
-                    browseSource = CardBrowse.Source.DrawPile,
-                    filterUUID = uuid
+                    status = VionheartSweetroll.Instance.AkashicDownload.Status,
+                    statusAmount = 1,
+                    targetPlayer = true
+                },
+                new AStatus
+                {
+                    status = VionheartSweetroll.Instance.ForesightDraw.Status,
+                    statusAmount = 3,
+                    targetPlayer = true
                 }
             ],
             Upgrade.A =>
             [
-                new ACardSelect
+                new AStatus
                 {
-                    browseAction = new ChooseCardToPutInHand
-                    {
-                    },
-                    browseSource = CardBrowse.Source.DrawPile,
-                    filterUUID = uuid
+                    status = VionheartSweetroll.Instance.AkashicDownload.Status,
+                    statusAmount = 1,
+                    targetPlayer = true
+                },
+                new AStatus
+                {
+                    status = VionheartSweetroll.Instance.ForesightDraw.Status,
+                    statusAmount = 3,
+                    targetPlayer = true
                 }
             ],
             Upgrade.B =>
             [
-                new ACardSelect
+                new AStatus
                 {
-                    browseAction = new ChooseCardToPutInHand
-                    {
-                    },
-                    browseSource = CardBrowse.Source.DrawPile,
-                    filterUUID = uuid
+                    status = VionheartSweetroll.Instance.AkashicDownload.Status,
+                    statusAmount = 2,
+                    targetPlayer = true
                 },
-                new ACardSelect
+                new AStatus
                 {
-                    browseAction = new ChooseCardToPutInHand
-                    {
-                    },
-                    browseSource = CardBrowse.Source.DrawPile,
-                    filterUUID = uuid
+                    status = VionheartSweetroll.Instance.ForesightDraw.Status,
+                    statusAmount = 3,
+                    targetPlayer = true
                 }
             ],
             _ => []

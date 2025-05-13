@@ -71,7 +71,7 @@ public class VulcanShotgun : Card, IRegisterable
                     card = new ReloadVulcanShotgun
                     {
                     },
-                    destination = CardDestination.Deck,
+                    destination = CardDestination.Discard,
                     insertRandomly = true,
                     canRunAfterKill = true
                 }
@@ -88,7 +88,7 @@ public class VulcanShotgun : Card, IRegisterable
                     {
                         upgrade = Upgrade.A
                     },
-                    destination = CardDestination.Deck,
+                    destination = CardDestination.Discard,
                     canRunAfterKill = true
                 }
             ],
